@@ -34,7 +34,8 @@
           <div class="col-md-2 col-sm-3 col-xs-12">
            <div class="header_btn_wrap">
              <div class="header_btn_wrap_block">
-               <button class="header_btn text-uppercase text-left popup_engineer_btn">
+               <button class="header_btn text-uppercase text-left popup_engineer_btn"
+                       data-btn="engineer-open">
                    Вызвать <br>замерщика
                </button>
              </div>
@@ -54,7 +55,7 @@
             <div class="contact_us">
               <div class="contact_us_wrap">
                 <a href="#"><img src="assets/img/header/phone.png" alt="#">+7 (495) 646-61-71</a>
-                <a class="phone_link" href="#">Заказать обратный звонок</a>
+                <a class="phone_link" href="#" data-link="engineer-open">Заказать обратный звонок</a>
               </div>
             </div>
           </div>
@@ -770,7 +771,7 @@
       <div class="container">
         <div class="feedback_block text-center">
           <h3>Остались вопросы?</h3>
-          <a class="phone_link" href="#">Спросите у нашего специалиста!</a>
+          <a class="phone_link" href="#" data-link="engineer-open">Спросите у нашего специалиста!</a>
         </div>
       </div>
     </section>
@@ -800,10 +801,10 @@
 
     <!-- Modals -->
     <!-- Request a call -->
-    <div class="popup">
+    <div class="popup" data-modal="popup">
         <div class="popup_dialog">
             <div class="popup_content text-center">
-                <button type="button" class="popup_close"><strong>&times;</strong></button>
+                <button type="button" class="popup_close" data-btn="popup-close"><strong>&times;</strong></button>
                 <div class="popup_form">
                     <form class="form" action="#">
                       <h2>Введите ваши данные <br>и нажмите заказать звонок</h2>
@@ -818,10 +819,10 @@
     </div>
 
     <!-- Request an engineer -->
-    <div class="popup_engineer">
+    <div class="popup_engineer" data-modal="engineer">
         <div class="popup_dialog">
             <div class="popup_content text-center">
-                <button type="button" class="popup_close"><strong>&times;</strong></button>
+                <button type="button" class="popup_close" data-btn="engineer-close"><strong>&times;</strong></button>
                 <div class="popup_form">
                     <form class="form" action="#">
                       <h2>Запишитесь сегодня на <br><span>бесплатный замер</span></h2>
@@ -916,10 +917,6 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Add slick.js -->
-    <script src="assets/slick/slick.min.js"></script>
-    <!-- Initialize modal, sliders -->
-
+    <script src="script.js"></script>
   </body>
 </html>
