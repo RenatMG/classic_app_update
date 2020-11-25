@@ -1,1 +1,9 @@
 node_modules
+.idea/.gitignore
+.idea/classic-app.iml
+.idea/deployment.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+dist/
+
