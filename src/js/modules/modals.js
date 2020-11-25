@@ -43,7 +43,7 @@ const modals = () => {
 		})
 	}
 
-	function showModalByTime(selector, time) {
+	function showModalByTime(selector, time = 60000) {
 		setTimeout(() => {
 			showModal(document.querySelector(selector))
 		}, time)
@@ -51,7 +51,7 @@ const modals = () => {
 
 	bindModal('[data-link="engineer-open"]', '[data-modal="popup"]', '[data-btn="popup-close"]');
 	bindModal('[data-btn="engineer-open"]', '[data-modal="engineer"]', '[data-btn="engineer-close"]');
-	showModalByTime('[data-modal="popup"]', 3000);
+	// showModalByTime('[data-modal="popup"]');
 };
 
 export default modals;
