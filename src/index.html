@@ -171,7 +171,7 @@
            </div> 
             <div class="glazing_price">
                 <p>2600 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
             </div>
           </div>
 
@@ -188,7 +188,7 @@
             </div> 
              <div class="glazing_price">
                  <p>4000 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                 <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                 <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
              </div>
           </div>
 
@@ -210,7 +210,7 @@
            </div> 
             <div class="glazing_price">
                 <p>4000 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
             </div>
           </div>
 
@@ -227,7 +227,7 @@
             </div> 
              <div class="glazing_price">
                  <p>8000 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                 <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                 <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
              </div>
           </div>
 
@@ -249,7 +249,7 @@
             </div> 
              <div class="glazing_price">
                  <p>5500 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                 <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                 <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
              </div>
           </div>
 
@@ -271,7 +271,7 @@
            </div> 
             <div class="glazing_price">
                 <p>5500 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
             </div>
           </div>
 
@@ -288,7 +288,7 @@
             </div> 
              <div class="glazing_price">
                  <p>8000 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                 <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                 <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
              </div>
           </div>
 
@@ -310,7 +310,7 @@
            </div> 
             <div class="glazing_price">
                 <p>4000 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
             </div>
           </div>
 
@@ -327,7 +327,7 @@
             </div> 
              <div class="glazing_price">
                  <p>8000 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                 <button class="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                 <button class="button glazing_price_btn text-uppercase popup_calc_btn" data-btn="calc-open">Рассчитать стоимость</button>
              </div>
           </div>
 
@@ -837,10 +837,10 @@
     </div>
 
     <!-- Calculator -->
-   <div class="popup_calc">
+   <div class="popup_calc" data-modal="calc">
         <div class="popup_dialog">
             <div class="popup_calc_content text-center">
-                <button type="button" class="popup_calc_close"><strong>&times;</strong></button>
+                <button type="button" class="popup_calc_close" data-btn="calc-close"><strong>&times;</strong></button>
                  <h2>Калькулятор</h2>
                 <h3>Выберите форму балкона <br>и укажите размеры</h3>
                 <div class="balcon_icons">
@@ -864,15 +864,15 @@
                 <div class="multiplication"><strong>&times;</strong></div>
                 <input class="form-control" id="height" type="text" placeholder="Высота" required>
                 <label for="height">мм</label>
-                <button class="button popup_calc_button">Далее</button>
+                <button class="button popup_calc_button" data-btn="calc_profile-open">Далее</button>
             </div>
         </div>
     </div> 
 
-   <div class="popup_calc_profile">
+   <div class="popup_calc_profile" data-modal="calc_profile">
         <div class="popup_dialog">
             <div class="popup_calc_profile_content text-center">
-                <button type="button" class="popup_calc_profile_close"><strong>&times;</strong></button>
+                <button type="button" class="popup_calc_profile_close" data-btn="calc_profile-close"><strong>&times;</strong></button>
                  <h2>Калькулятор</h2>
                  <h3>Выберите тип остекления <br>и его профиль</h3>
                  <select class="form-control" name="view" id="view_type">
@@ -895,15 +895,15 @@
                      <span class="label">Теплое</span>
                  </label>
 
-                 <button class="button popup_calc_profile_button">Далее</button>
+                 <button class="button popup_calc_profile_button" data-btn="calc_end-open">Далее</button>
             </div>
         </div>
     </div> 
 
-    <div class="popup_calc_end">
+    <div class="popup_calc_end" data-modal="calc_end">
         <div class="popup_dialog">
             <div class="popup_content text-center">
-                <button type="button" class="popup_calc_end_close"><strong>&times;</strong></button>
+                <button type="button" class="popup_calc_end_close" data-btn="calc_end-close"><strong>&times;</strong></button>
                 <div class="popup_form">
                     <form class="form" action="#">
                       <h2>Спасибо за обращение! <br>Оставьте свои данные</h2>
