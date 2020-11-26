@@ -16,11 +16,14 @@ const modals = () => {
 		}
 	}
 
-	function bindModal(triggerSelector, modalSelector, closeSelector) {
+	function bindModal(triggerSelector, modalSelector, closeSelector, closeClickOverlay = true) {
+		// closeClickOverlay = true закрывать модальное окно при клике на подложку
 
 		const triggers = document.querySelectorAll(triggerSelector);
 		const modal = document.querySelector(modalSelector);
 		const close = document.querySelector(closeSelector);
+		const popups = document.querySelectorAll('[data-modal]');
+		console.log(popups);
 
 		// trigger - is element, which will open modal
 		triggers.forEach((trigger) => {
@@ -28,17 +31,28 @@ const modals = () => {
 				if (evt.target) {
 					evt.preventDefault();
 				}
+
+				popups.forEach((popup) => {
+					closeModal(popup);
+				});
+
 				showModal(modal);
 			});
 		});
 
 		close.addEventListener('click', () => {
 			closeModal(modal);
+			popups.forEach((popup) => {
+				closeModal(popup);
+			});
 		});
 
 		modal.addEventListener('click', (evt) => {
-			if (evt.target === modal) {
+			if (evt.target === modal && closeClickOverlay) {
 				closeModal(modal);
+				popups.forEach((popup) => {
+					closeModal(popup);
+				});
 			}
 		})
 	}
@@ -51,6 +65,10 @@ const modals = () => {
 
 	bindModal('[data-link="engineer-open"]', '[data-modal="popup"]', '[data-btn="popup-close"]');
 	bindModal('[data-btn="engineer-open"]', '[data-modal="engineer"]', '[data-btn="engineer-close"]');
+	bindModal('[data-btn="calc-open"]', '[data-modal="calc"]', '[data-btn="calc-close"]');
+	bindModal('[data-btn="calc_profile-open"]', '[data-modal="calc_profile"]', '[data-btn="calc_profile-close"]', false)
+	bindModal('[data-btn="calc_end-open"]', '[data-modal="calc_end"]', '[data-btn="calc_end-close"]', false)
+
 	// showModalByTime('[data-modal="popup"]');
 };
 
